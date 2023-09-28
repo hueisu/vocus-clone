@@ -1,0 +1,55 @@
+.tool-container {
+  position: fixed;
+  top: 200px;
+  left: calc(((100vw - 740px) / 2) - 100px);
+  border: 1px solid #ddd9d8;
+  border-radius: 6px;
+  padding: 8px 0;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 6px 0px;
+  background-color: white;
+  width: 40px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  hr {
+    width: 85%;
+    border: 0;
+    border-top: 1px solid #dedede;
+    margin: 6px 0;
+  }
+}
+
+.tool-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 30px;
+  position: relative;
+
+  > svg {
+    color: #7a7574;
+  }
+
+  &--align-bottom > svg:nth-child(2) {
+    margin-top: 5px;
+  }
+
+  &[button-title]::before {
+    right: 40px;
+  }
+  
+    &[button-title]:hover::before {
+      @media screen and (max-width: 1200px) {
+        right: unset;
+        left: 40px;
+      }
+    }
+
+  &[disabled] {
+    cursor: not-allowed;
+  }
+}

@@ -1,0 +1,113 @@
+.editor-content {
+  padding: 50px 0 80px;
+  
+  & > * {
+    width: 740px;
+    margin: auto;
+  } 
+  
+  [contentEditable="true"] {
+    outline: none;
+  }
+  
+  &__title {
+    margin: 40px auto 0;
+    font-size: 42px;
+    line-height: 1.3em;
+    font-weight: bold;
+    height: 113px;
+    display: block;
+    border: 0;
+    resize: none;
+    outline: 0px;
+    overflow: hidden;
+  }
+
+  p {
+    line-height: 1.7rem;
+    min-height: 1.7rem;
+    letter-spacing: .04rem;
+    font-size: 20px;
+    margin: 28px auto;
+  }
+}
+
+.media-toolbar {
+  position: absolute;
+  bottom: calc(80px + 28px - 5px);
+  left: calc(((100vw - 740px) / 2) - 100px + 38px + 10px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  background-color: #f6f6f6;
+  border: 1px solid transparent;
+
+  &:hover {
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 6px 0px;
+    border: 1px solid rgb(235, 234, 234);
+     .media-toolbar--button-group{
+       display: flex;
+     }
+  }
+
+  &--button {
+    width: 38px;
+    height: 38px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  svg {
+    color: #807f7e;
+  }
+
+  &--button-group {
+    // display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-grow: 1;
+    display: none;
+    > .media-toolbar--button {
+      padding: 1px 6px;
+      margin: 0 2px;
+    }
+  }
+  &--divider {
+    height: 30px;
+    border-left: 1px solid rgb(242, 241, 240)
+  }
+
+  button[button-title]::before {
+    top: -30px;
+  }
+}
+
+input.input-info {
+  display: block;
+  margin: 0 auto;
+  border:none;
+  color: gray;
+  font-size: 14px;
+  min-height: 14px;
+  word-break: break-word;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  font-weight: normal;
+  &:focus {
+    outline:none;
+  }
+}
+
+.loading-container {
+  > * {
+    color: gray;
+  }
+
+  &__cancel-button {
+    margin-top:10px;
+    color: red;
+  }
+}
